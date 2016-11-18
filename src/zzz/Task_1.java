@@ -13,10 +13,9 @@ public class Task_1 {
 
 		for (int i = numberOfPoints - 1; i > 0; i--) {
 			for (int j = 0; j < i; j++) {
-				double m = Math.sqrt(points[j].getX() * points[j].getX()
-						+ points[j].getY() * points[j].getY());
-				double r = Math.sqrt(points[j + 1].getX() * points[j +1].getX()
-						+ points[j + 1].getY() * points[j + 1].getY());
+				double m = Math.sqrt(points[j].getX() * points[j].getX() + points[j].getY() * points[j].getY());
+				double r = Math.sqrt(
+						points[j + 1].getX() * points[j + 1].getX() + points[j + 1].getY() * points[j + 1].getY());
 				if (m > r) {
 					Points tmp = points[j];
 					points[j] = points[j + 1];

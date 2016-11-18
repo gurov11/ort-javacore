@@ -1,21 +1,25 @@
 package zzz;
 
 public class Points {
-private int x,y;
-private String name;
-Points(int a ,int b,String r){
-	x = a;
-	y = b;
-	name = r;
-}
-public int getX(){
-	return x;
-}
-public int getY(){
-	return y;
-}
+	private int coordinateX;
+	private int coordinateY;
+	private String nameOfPoint;
 
-public String getName(){
-	return name;
-}
+	Points(int x, int y, String name) {
+		coordinateX = x;
+		coordinateY = y;
+		nameOfPoint = name;
+	}
+
+	public int getX() {
+		return coordinateX;
+	}
+
+	public int getY() {
+		return coordinateY;
+	}
+
+	public String getName() {
+		return nameOfPoint;
+	}
 }
