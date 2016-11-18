@@ -8,16 +8,16 @@ public class Main {
 	public static void main(String[] args) {
 
 		Students[] student = new Students[Students.getNumberOfStudents()];
-		student[0] = new Students("Дарья", "Жукова", "Игореевна", 11);
-		student[1] = new Students("Татьяна", "Федорова", "Павловна", 21);
-		student[2] = new Students("Василий", "Пупкин", "Андреевич", 21);
-		student[3] = new Students("Виталий", "Романов", "Егорович", 11);
-		student[4] = new Students("Вьячеслав", "Комиссаренко", "Павлович", 11);
-		student[5] = new Students("Алексей", "Щербаков", "Семенович", 21);
-		student[6] = new Students("Иван", "Абрамов", "Васильевич", 21);
-		student[7] = new Students("Тимур", "Каргинов", "Рахматович", 11);
-		student[8] = new Students("Юлия", "Ахмедова", "Олеговна", 21);
-		student[9] = new Students("Лариса", "Прилова", "Валерьевна", 11);
+		student[0] = new Students("Р”Р°СЂСЊСЏ", "Р–СѓРєРѕРІР°", "РРіРѕСЂРµРµРІРЅР°", 11);
+		student[1] = new Students("РўР°С‚СЊСЏРЅР°", "Р¤РµРґРѕСЂРѕРІР°", "РџР°РІР»РѕРІРЅР°", 21);
+		student[2] = new Students("Р’Р°СЃРёР»РёР№", "РџСѓРїРєРёРЅ", "РђРЅРґСЂРµРµРІРёС‡", 21);
+		student[3] = new Students("Р’РёС‚Р°Р»РёР№", "Р РѕРјР°РЅРѕРІ", "Р•РіРѕСЂРѕРІРёС‡", 11);
+		student[4] = new Students("Р’СЊСЏС‡РµСЃР»Р°РІ", "РљРѕРјРёСЃСЃР°СЂРµРЅРєРѕ", "РџР°РІР»РѕРІРёС‡", 11);
+		student[5] = new Students("РђР»РµРєСЃРµР№", "Р©РµСЂР±Р°РєРѕРІ", "РЎРµРјРµРЅРѕРІРёС‡", 21);
+		student[6] = new Students("РРІР°РЅ", "РђР±СЂР°РјРѕРІ", "Р’Р°СЃРёР»СЊРµРІРёС‡", 21);
+		student[7] = new Students("РўРёРјСѓСЂ", "РљР°СЂРіРёРЅРѕРІ", "Р Р°С…РјР°С‚РѕРІРёС‡", 11);
+		student[8] = new Students("Р®Р»РёСЏ", "РђС…РјРµРґРѕРІР°", "РћР»РµРіРѕРІРЅР°", 21);
+		student[9] = new Students("Р›Р°СЂРёСЃР°", "РџСЂРёР»РѕРІР°", "Р’Р°Р»РµСЂСЊРµРІРЅР°", 11);
 		createAndFillArrayOfMarks(student, Students.getNumberOfStudents());
 		appointmentOfGrant(student, Students.getNumberOfStudents());
 
