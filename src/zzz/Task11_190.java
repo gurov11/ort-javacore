@@ -6,31 +6,32 @@ public class Task11_190 {
 
 	public static void main(String[] args) {
 		Random rd = new Random();
-		int[] firstTerm = new int[20];
-		int[] secondTerm = new int[20];
-		int[] sum = new int[20];
+		final int sizeOfNumber = 20;
+		int[] firstTerm = new int[sizeOfNumber];
+		int[] secondTerm = new int[sizeOfNumber];
+		int[] sum = new int[sizeOfNumber];
 
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < sizeOfNumber; i++) {
 			firstTerm[i] = rd.nextInt(10);
 
 		}
 		System.out.print("firstTerm : ");
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < sizeOfNumber; i++) {
 			System.out.print(firstTerm[i]);
 		}
 		System.out.println();
 
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < sizeOfNumber; i++) {
 			secondTerm[i] = rd.nextInt(10);
 
 		}
 		System.out.print("secondTerm: ");
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < sizeOfNumber; i++) {
 			System.out.print(secondTerm[i]);
 		}
 		System.out.println();
 		int r;
-		for (int i = 19; i >= 0; i--) {
+		for (int i = sizeOfNumber - 1; i >= 0; i--) {
 			if (firstTerm[i] >= 10) {
 				firstTerm[i] = firstTerm[i] % 10;
 				firstTerm[i - 1] = firstTerm[i - 1] + firstTerm[i] / 10;
@@ -55,7 +56,7 @@ public class Task11_190 {
 
 		}
 
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < sizeOfNumber; i++) {
 			System.out.print(sum[i]);
 		}
 
