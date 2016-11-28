@@ -1,11 +1,11 @@
 package zzz;
 
-public class Points {
+public class Point {
 	private int coordinateX;
 	private int coordinateY;
 	private String nameOfPoint;
 
-	Points(int x, int y, String name) {
+	public Point(int x, int y, String name) {
 		coordinateX = x;
 		coordinateY = y;
 		nameOfPoint = name;
