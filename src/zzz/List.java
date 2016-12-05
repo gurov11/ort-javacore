@@ -1,35 +1,36 @@
 package zzz;
 
 public class List {
-	private List head;
-	private List tail;
-	private int data;
-	private List next;
+	ListElement head;
+	ListElement tail;
 
 	public void Add(int data) {
-		List m = new List();
-		m.data = data;
+
+		ListElement l = new ListElement();
+		l.data = data;
+
 		if (head == null) {
-			head = m;
-			tail = m;
+			head = l;
+			tail = l;
 
 		} else {
-			m.next = head;
-			head = m;
+			l.next = head;
+			head = l;
 		}
 
 	}
 
 	public void AddBack(int data) {
-		List m = new List();
-		m.data = data;
+		ListElement l = new ListElement();
+		l.data = data;
+		;
 		if (head == null) {
-			head = m;
-			tail = m;
+			head = l;
+			tail = l;
 
 		} else {
-			tail.next = m;
-			tail = m;
+			tail.next = l;
+			tail = l;
 
 		}
 
@@ -50,7 +51,7 @@ public class List {
 			return;
 		}
 
-		List t = head;
+		ListElement t = head;
 		while (t.next != null) {
 			if (t.next.data == data) {
 				if (tail == t.next) {
@@ -64,7 +65,7 @@ public class List {
 	}
 
 	public void printList() {
-		List m = head;
+		ListElement m = head;
 		while (m != null) {
 			System.out.print(m.data + " | ");
 			m = m.next;
