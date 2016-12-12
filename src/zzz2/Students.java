@@ -17,7 +17,9 @@ public class Students {
 		this.patronymic = patronymic;
 		this.numberOfGroup = numberOfGroup;
 	}
-
+/**
+ * Метод генерирует массив оценок.
+ */
 	public void createArrayOfMarks() {
 		this.marks = new int[5];
 		for (int i = 0; i < 5; i++) {
@@ -54,8 +56,8 @@ public class Students {
 	public String toString() {
 		StringBuilder str = new StringBuilder();
 		str.append(this.surname).append(" ").append(this.name).append(" ").append(this.patronymic).append(" (")
-				.append(this.numberOfGroup).append("-�� ��. ������ - ").append(Arrays.toString(this.marks))
-				.append(" ���������: ").append(this.getGrant()).append("%");
+				.append(this.numberOfGroup).append("-группа. Оценки - ").append(Arrays.toString(this.marks))
+				.append(" Стипендия: ").append(this.getGrant()).append("%");
 		return str.toString();
 	}
 

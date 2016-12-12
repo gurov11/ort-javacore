@@ -20,7 +20,9 @@ public class Main {
 		student[9] = new Students("Лариса", "Прилова", "Валерьевна", 11);
 		createAndFillArrayOfMarks(student, Students.getNumberOfStudents());
 		appointmentOfGrant(student, Students.getNumberOfStudents());
-
+/**
+ * Сортирует массив студентов по номеру группы и фамилии
+ */
 		Arrays.sort(student, new CompByNumOfGroupAndSurname());
 		for (int i = 0; i < Students.getNumberOfStudents(); i++) {
 			System.out.println(student[i].toString());
