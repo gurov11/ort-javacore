@@ -2,10 +2,12 @@ package task11;
 
 public interface Constants {
 	final static double fixedSalary = 3800;
-	final static double salaryForHor = fixedSalary/30/7;
-	
-	
-	
+	final static double salaryForHor = fixedSalary / 30 / 7;
+
+	/**
+	 * ФИО всех работников
+	 */
+
 	final static String FIO = "Никитин Н.Ф.";
 	final static String FIO2 = "Иванов П.А.";
 	final static String FIO3 = "Смирнов А.Н.";
@@ -16,4 +18,10 @@ public interface Constants {
 	final static String FIO8 = "Павлов Р.А.";
 	final static String FIO9 = "Козлов М.Е.";
 	final static String FIO10 = "Захаров Л.Б.";
+	/**
+	 * Тип работника
+	 */
+	final static String type1 = "повременщик";
+	final static String type2 = "раб.с.фикс.зарплатой";
+
 }
