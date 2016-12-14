@@ -3,13 +3,13 @@ package task11;
 public abstract class Employee implements Constants {
 	private String _FIO;
 	private String _typeOfWorker;
-	private double _salary;
+	private int _salary;
 
 	public double get_salary() {
 		return _salary;
 	}
 
-	public void set_salary(double _salary) {
+	public void set_salary(int _salary) {
 		this._salary = _salary;
 	}
 
@@ -30,5 +30,9 @@ public abstract class Employee implements Constants {
 	public void set_typeOfWorker(String _typeOfWorker) {
 		this._typeOfWorker = _typeOfWorker;
 	}
-
+	public String toString() {
+		 		StringBuilder str = new StringBuilder();
+		 		str.append(this.get_FIO()).append(" - ").append(this.get_typeOfWorker()).append(". Зарплата: ").append(this.get_salary());
+		 		return str.toString();
+		 	}
 }

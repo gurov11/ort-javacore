@@ -13,7 +13,7 @@ public class WorkerWithFixedSalary extends Employee {
 
 	@Override
 	public void calculationSalary() {
-		double salary = this.fixedSalary;
+		int salary = this.fixedSalary;
 		this.set_salary(salary);
 	}
 
