@@ -30,9 +30,11 @@ public abstract class Employee implements Constants {
 	public void set_typeOfWorker(String _typeOfWorker) {
 		this._typeOfWorker = _typeOfWorker;
 	}
+
 	public String toString() {
-		 		StringBuilder str = new StringBuilder();
-		 		str.append(this.get_FIO()).append(" - ").append(this.get_typeOfWorker()).append(". Зарплата: ").append(this.get_salary());
-		 		return str.toString();
-		 	}
+		StringBuilder str = new StringBuilder();
+		str.append(this.get_FIO()).append(" - ").append(this.get_typeOfWorker()).append(". Зарплата: ")
+				.append(this.get_salary());
+		return str.toString();
+	}
 }
