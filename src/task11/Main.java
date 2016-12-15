@@ -15,9 +15,18 @@ public class Main {
 		empoloyee[7] = new WorkerWithSalaryPerHour(Constants.FIO8);
 		empoloyee[8] = new WorkerWithFixedSalary(Constants.FIO9);
 		empoloyee[9] = new WorkerWithFixedSalary(Constants.FIO10);
-		for(int i =0; i <10; i ++){
-			System.out.println(empoloyee[i].toString());
-		}
+		
+	Arrays.sort(empoloyee, new CompSalaryAndFio());
+	
+	for(int i =0; i <5; i ++){
+		System.out.println(empoloyee[i].toString());
+	}
+	System.out.println("------------------------------");
+	for(int i =9; i > 6; i --){
+		System.out.println(empoloyee[i].toString());
+	}
+	
+	
 	}
 	
 	 		

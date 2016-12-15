@@ -1,8 +1,9 @@
 package task11;
 
 public interface Constants {
+	
 	final static int fixedSalary = 3800;
-	final static int salaryForHor = (int)fixedSalary / 20 / 10;
+	final static int salaryForHor = (int)fixedSalary / 20 / 24;
 
 	/**
 	 * ФИО всех работников
