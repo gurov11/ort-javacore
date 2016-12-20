@@ -1,66 +1,92 @@
 package task3;
 
 public class Fraction {
-	private int _integerPartOfNumber;
-	private int _fractionalPartOfNumber;
+	private int _numerator;
 
-	public Fraction(int integerPartOfNumber, int fractionalPartOfNumber) {
-		this._integerPartOfNumber = integerPartOfNumber;
-		if (fractionalPartOfNumber < 0) {
+	private int _denominator;
+
+	public Fraction(int numerator, int denominator) {
+		this._numerator = numerator;
+		if (denominator < 0) {
 			System.err.println("Fractional part is incorrect! ");
-			this._fractionalPartOfNumber = fractionalPartOfNumber * (-1);
+			this._denominator = denominator * (-1);
 		} else {
-			this._fractionalPartOfNumber = fractionalPartOfNumber;
+			this._denominator = denominator;
 		}
 	}
 
-	public static double additional(Fraction f1, Fraction f2) {
-		double sum = Fraction.fractionalNumber(f1) + Fraction.fractionalNumber(f2);
+	public Fraction() {
+	}
+
+	public Fraction additional(Fraction f) {
+		Fraction sum = new Fraction();
+		sum.setDenominator(Fraction.NOK(this.getDenominator(), f.getDenominator()));
+		sum.setNumerator((sum.getDenominator() / this.getDenominator() * this.getNumerator())
+				+ (sum.getDenominator() / f.getDenominator() * f.getNumerator()));
 		return sum;
 	}
 
-	public static double substraction(Fraction f1, Fraction f2) {
-		double differ = Fraction.fractionalNumber(f1) - Fraction.fractionalNumber(f2);
+	public Fraction substraction(Fraction f) {
+		Fraction differ = new Fraction();
+		differ.setDenominator(Fraction.NOK(this.getDenominator(), f.getDenominator()));
+		differ.setNumerator((differ.getDenominator() / this.getDenominator() * this.getNumerator())
+				- (differ.getDenominator() / f.getDenominator() * f.getNumerator()));
+
 		return differ;
 	}
 
-	public static double multiplication(Fraction f1, Fraction f2) {
-		double multip = Fraction.fractionalNumber(f1) * Fraction.fractionalNumber(f2);
+	public Fraction multiplication(Fraction f) {
+		Fraction multip = new Fraction();
+		multip.setDenominator(this.getDenominator() * f.getDenominator());
+		multip.setNumerator(this._numerator * f._numerator);
 		return multip;
 	}
 
-	public static double division(Fraction f1, Fraction f2) {
-		if (Fraction.fractionalNumber(f1) == 0) {
-			double div = Fraction.fractionalNumber(f2) / Fraction.fractionalNumber(f1);
-			return div;
+	public Fraction division(Fraction f) {
+		Fraction div = new Fraction();
+		div.setDenominator(this.getDenominator() * f.getNumerator());
+		div.setNumerator(this._numerator * f._denominator);
+		if (div._numerator < 0 && div._denominator < 0) {
+			div._numerator *= -1;
+			div._denominator *= -1;
 		}
-
-		else {
-			double div = Fraction.fractionalNumber(f1) / Fraction.fractionalNumber(f2);
-			return div;
+		if (div._denominator < 0) {
+			div._numerator *= -1;
+			div._denominator *= -1;
 		}
+		return div;
 	}
 
-	private static double fractionalNumber(Fraction f) {
-		double fractionalNumber = 0;
-		double fractionalPart = f.get_fractionalPartOfNumber();
-		while (fractionalPart > 1) {
-			fractionalPart /= 10;
-		}
-		if (f.get_integerPartOfNumber() < 0) {
-			fractionalNumber = f.get_integerPartOfNumber() - fractionalPart;
-		} else {
-			fractionalNumber = f.get_integerPartOfNumber() + fractionalPart;
-		}
-		return fractionalNumber;
+	public int getNumerator() {
+		return _numerator;
 	}
 
-	public int get_integerPartOfNumber() {
-		return _integerPartOfNumber;
+	public int getDenominator() {
+		return _denominator;
 	}
 
-	public int get_fractionalPartOfNumber() {
-		return _fractionalPartOfNumber;
+	public void setNumerator(int numerator) {
+		this._numerator = numerator;
+	}
+
+	public void setDenominator(int denominator) {
+		this._denominator = denominator;
+	}
+
+	private static int NOK(int x, int n) {
+		int j;
+		if (x < n)
+			j = n;
+		else
+			j = x;
+		boolean t = true;
+		while (t) {
+			if ((j % x == 0) && (j % n == 0))
+				break;
+			else
+				j += 1;
+		}
+		return j;
 	}
 
 }

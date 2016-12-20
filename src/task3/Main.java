@@ -3,14 +3,18 @@ package task3;
 public class Main {
 
 	public static void main(String[] args) {
-		Fraction f1 = new Fraction(1251, 32);
-		Fraction f2 = new Fraction(-1, 0025);
-		System.out.println("Первое число: " + f1.get_integerPartOfNumber() + "," + f1.get_fractionalPartOfNumber());
-		System.out.println("Второе число: " + f2.get_integerPartOfNumber() + "," + f2.get_fractionalPartOfNumber());
-		System.out.println("Сложение: " + Fraction.additional(f1, f2));
-		System.out.println("Вычитание: " + Fraction.substraction(f1, f2));
-		System.out.println("Умножение: " + Fraction.multiplication(f1, f2));
-		System.out.println("Деление: " + Fraction.division(f1, f2));
+		Fraction f1 = new Fraction(2, 4);
+		Fraction f2 = new Fraction(-1, 5);
+		System.out.println("Первое число: " + f1.getNumerator() + "/" + f1.getDenominator());
+		System.out.println("Второе число: " + f2.getNumerator() + "/" + f2.getDenominator());
+		Fraction sum = f1.additional(f2);
+		System.out.println("Сложение: " + sum.getNumerator() + "/" + sum.getDenominator());
+		Fraction sub = f1.substraction(f2);
+		System.out.println("Вычитание: " + sub.getNumerator() + "/" + sub.getDenominator());
+		Fraction multip = f1.multiplication(f2);
+		System.out.println("Умножение: " + multip.getNumerator() + "/" + multip.getDenominator());
+		Fraction div = f1.division(f2);
+		System.out.println("Деление: " + div.getNumerator() + "/" + div.getDenominator());
 
 	}
 
